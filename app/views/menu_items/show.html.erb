@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Meal Details</div>
+
+
+    <!-- Table -->
+      <div class="row">
+        <div class="col-md-4"><%= image_tag 'salad.jpeg', height:"220", width:"350" %></div>
+        <div class="col-md-7 menu_item_box">
+          <div class="container">
+            <div class="row"><h5>Dish name: <b><%= @menu_item.name.upcase %></b></h5></div>
+            <div class="row"><h5>Amount available: <b><%= @menu_item.pax %></b></h5></div>
+            <div class="row"><h5>Description: <b><%= @menu_item.description.capitalize %></b></h5></div>
+            <div class="row"><h5>Ingredients: <b><%= @menu_item.ingredients.capitalize %></b></h5></div>
+            <div class="row"><h5>Price: <b><%= humanized_money_with_symbol @menu_item.price %></b> per pax</h5></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-right"><h4>Chef <i><%= @user.name.capitalize %></i></h4></div>
+          <div class="col-md-6 text-left"><%= image_tag(@user.picture_url, height:"50", class:"img-circle", width:"50") %></div>
+        </div>
+      </div>
+
+  </div>
+
+        <div class="container">
+        <div class="row text-center">
+          <div class="text-center btn btn-success"><h4><b><%= link_to 'Confirm', edit_menu_item_path(@menu_item) %></b></h4></div>
+        </div>
+      </div>
+</div>

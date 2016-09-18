@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+    <div class="container text-center">
+      <%= image_tag 'joie.jpg', height:"100", width:"100", class: 'img-circle' %>
+    </div>
+      <br>
+      <div class="container">
+        <h4 class="text-center">
+          <i><%= @user.name.capitalize %></i>
+        </h4>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row text-center">
+        <h5><b>Contact</b></h5>
+        <h5><%= @user.phone %></h5>
+      </div>
+      <div class="row text-center">
+        <h5><b>Favorite Food</b></h5>
+        <h5><%= @user.favorite_food %></h5>
+      </div>
+      <div class="row text-center">
+        <h5><b>Religion</b></h5>
+        <h5><%= @user.religious %></h5>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
+
+   <!-- Table -->
+
+

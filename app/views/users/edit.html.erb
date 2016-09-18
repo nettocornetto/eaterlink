@@ -1,0 +1,39 @@
+   <div class="container">
+     <div class="panel panel-default">
+    <div class="panel-heading">
+    <h4>Edit Profile</h4>
+    <div class="container text-left">
+     <div class="row">
+      <%= form_for [@user], :url => user_path(@user), :method => :patch do |f| %>
+      <div class="col-md-12">
+        <br>
+          <div class="form-group">
+            <%= f.label 'Name: ' %>
+            <br>
+            <%= f.text_field :name %>
+          </div>
+          <div class="form-group">
+            <%= f.label 'Contact Number: ' %>
+            <br>
+            <%= f.text_area :phone %>
+          </div>
+          <div class="form-group">
+            <%= f.label 'Favorite Food: '%>
+            <br>
+            <%= f.text_area :favorite_food %>
+          </div>
+          <div class="form-group">
+            <%= f.label 'Religion: '%>
+            <br>
+            <%= f.text_area :religious %>
+          </div>
+        </div>
+
+          <%= f.submit :update, :class => "btn btn-large btn-success post-btn" %>
+          <%= link_to :cancel, user_path(@user), :class => "btn btn-large btn-danger post-btn" %>
+      <% end %>
+    </div>
+    </div>
+    </div>
+    </div>
+  </div>
